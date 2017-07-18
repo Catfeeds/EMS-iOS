@@ -17,6 +17,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
+//    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeFlat];
+    [SVProgressHUD setRingThickness:8];
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+                case AFNetworkReachabilityStatusUnknown:
+                [SVProgressHUD showInfoWithStatus:@"未知网络"];
+                break;
+                case AFNetworkReachabilityStatusNotReachable:
+                [SVProgressHUD showInfoWithStatus:@"请检查网络链接！"];
+                break;
+                case AFNetworkReachabilityStatusReachableViaWiFi:
+                [SVProgressHUD showInfoWithStatus:@"已连接WIFI!"];
+                break;
+                case AFNetworkReachabilityStatusReachableViaWWAN:
+                [SVProgressHUD showInfoWithStatus:@"手机网络！"];
+                break;
+            default:
+                break;
+        }
+    }];
+//    [manager startMonitoring];
+    
+    self.window = [[UIWindow alloc] initWithFrame:APP_BOUNDS];
+    LaunchVC *launch = [LaunchVC new];
+    self.window.rootViewController = launch;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
