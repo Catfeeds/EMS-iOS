@@ -35,16 +35,47 @@
     POPBasicAnimation *removeCoverView = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
     removeCoverView.beginTime = CACurrentMediaTime() + 4;
     removeCoverView.toValue = @0;
-    removeCoverView.duration = 2;
+    removeCoverView.duration = 1;
     [_coverVC.view pop_addAnimation:removeCoverView forKey:@"removeCoverView"];
     [removeCoverView setCompletionBlock:^(POPAnimation *animation,BOOL finish){
         if (finish) {
             [_coverVC removeFromParentViewController];
+            // 界面消失后判断网络状态
+            if (!_coverVC.isBeingPresented) {
+                [self checkNetWorking];
+            }
         }
     }];
     
 }
-
+/**
+ 每次启动检查网络情况
+ */
+- (void)checkNetWorking {
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
+    //    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeFlat];
+    [SVProgressHUD setRingThickness:4];
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                [SVProgressHUD showInfoWithStatus:@"未知网络"];
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                [SVProgressHUD showInfoWithStatus:@"请检查网络链接！"];
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                [SVProgressHUD showInfoWithStatus:@"已连接WIFI!"];
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                [SVProgressHUD showInfoWithStatus:@"手机网络！"];
+                break;
+            default:
+                break;
+        }
+    }];
+    [manager startMonitoring];
+}
 
 /**
  * 初始化TabBar

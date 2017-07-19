@@ -5,4 +5,5 @@ target 'EMS' do
 	pod 'AFNetworking',        '~>3.1.0'
 	pod 'SVProgressHUD',  	   '~>2.1.2'
 	pod 'pop',		   '~>1.0.10'
+	pod 'Masonry',		   '~>1.0.2'
 end

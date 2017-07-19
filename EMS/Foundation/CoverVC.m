@@ -40,15 +40,15 @@
     [self.view addSubview:self.launchImageView];
     
     self.iconImageView = [[UIImageView alloc] initWithFrame:VIEWFRAME(0, 0, 100, 100)];
-    self.iconImageView.center = self.view.center;
+    self.iconImageView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HIGHT/2);
     self.iconImageView.image = [UIImage imageNamed:@"coverlog"];
     [self.launchImageView addSubview:self.iconImageView];
     [self initPositionAnimation];
     
     
-    self.titleImageView = [[UIImageView alloc] initWithFrame:VIEWFRAME(0, 0, 120, 40)];
-    self.titleImageView.center = CGPointMake(self.view.center.x, self.view.center.y - 40);
-    self.titleImageView.image = [UIImage imageNamed:@""];
+    self.titleImageView = [[UIImageView alloc] initWithFrame:VIEWFRAME(0, 0, SCREEN_WIDTH/3*2, SCREEN_WIDTH/3*2/6)];
+    self.titleImageView.center = CGPointMake(self.view.center.x, SCREEN_HIGHT - 40);
+    self.titleImageView.image = [UIImage imageNamed:@"cover"];
     self.titleImageView.alpha = 0;
     [self.view addSubview:self.titleImageView];
     //    [self initScaleAnimation];

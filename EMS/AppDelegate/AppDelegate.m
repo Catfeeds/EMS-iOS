@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GuideVC.h"
 
 @interface AppDelegate ()
 
@@ -18,34 +19,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
-//    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeFlat];
-    [SVProgressHUD setRingThickness:8];
-    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
-    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status) {
-                case AFNetworkReachabilityStatusUnknown:
-                [SVProgressHUD showInfoWithStatus:@"未知网络"];
-                break;
-                case AFNetworkReachabilityStatusNotReachable:
-                [SVProgressHUD showInfoWithStatus:@"请检查网络链接！"];
-                break;
-                case AFNetworkReachabilityStatusReachableViaWiFi:
-                [SVProgressHUD showInfoWithStatus:@"已连接WIFI!"];
-                break;
-                case AFNetworkReachabilityStatusReachableViaWWAN:
-                [SVProgressHUD showInfoWithStatus:@"手机网络！"];
-                break;
-            default:
-                break;
-        }
-    }];
-//    [manager startMonitoring];
-    
     self.window = [[UIWindow alloc] initWithFrame:APP_BOUNDS];
-    LaunchVC *launch = [LaunchVC new];
-    self.window.rootViewController = launch;
+    BOOL isFirst = [[NSUserDefaults standardUserDefaults] boolForKey:@"isFirst1"];
+    DebugLog(@"打印%@",isFirst?@"YES":@"NO");
+    
+    if (!isFirst) {
+        GuideVC *guideVC = [GuideVC new];
+        self.window.rootViewController = guideVC;
+    }else{
+        LaunchVC *launch = [LaunchVC new];
+        self.window.rootViewController = launch;
+    }
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
