@@ -10,6 +10,8 @@
 #define AppMacro_h
 
 
+#define COMPANY_NAME                    @"上海梓钦信息技术有限公司"
+
 #pragma mark - AppBaseColor
 // 基本颜色
 // 祖传蓝
@@ -45,6 +47,16 @@
 // 文字颜色
 #define APP_COLOR_BASE_TEXT_RED         [UIColor colorWithRed:0.70 green:0.21 blue:0.18 alpha:1.00]
 #define APP_COLOR_BASE_TEXT_GREY        HEXCOLOR(0x666666)
+
+
+#pragma mark - 接口相关
+
+#define APP_BASE_URL   @"http://192.168.0.101:8080"
+
+#define APP_LOGIN_URL   @"/login/check.do"
+
+
+
 
 
 #endif /* AppMacro_h */

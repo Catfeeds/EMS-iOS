@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CoverVC.h"
 #import "TabBarVC.h"
+#import "LoginVC.h"
 
 @interface LaunchVC : UIViewController
 @property(nonatomic,strong) CoverVC *coverVC;
 @property(nonatomic,strong) TabBarVC *tabBarVC;
+@property (nonatomic,strong) LoginVC *loginVC;
 @end

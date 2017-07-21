@@ -20,6 +20,15 @@
 
 #import "AFNetworking/AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "POP.h"
+#import "Masonry.h"
+#import "Mantle.h"
+
+#pragma mark - Categories
+#import "UILabel+Lazy.h"
+#import "UIButton+Lazy.h"
+#import "UITextField+Lazy.h"
+#import "NSString+Lazy.h"
 
 
 

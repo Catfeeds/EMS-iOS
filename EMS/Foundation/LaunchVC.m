@@ -9,6 +9,7 @@
 #import "LaunchVC.h"
 #import "AppDelegate.h"
 #import "POP.h"
+#import "LoginVC.h"
 
 @interface LaunchVC ()
 
@@ -31,7 +32,7 @@
  */
 - (void)initCoverVC {
     _coverVC = [CoverVC new];
-    [_tabBarVC.view addSubview:_coverVC.view];
+    [_loginVC.view addSubview:_coverVC.view];
     POPBasicAnimation *removeCoverView = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
     removeCoverView.beginTime = CACurrentMediaTime() + 4;
     removeCoverView.toValue = @0;
@@ -74,7 +75,7 @@
                 break;
         }
     }];
-    [manager startMonitoring];
+//    [manager startMonitoring];
 }
 
 /**
@@ -82,9 +83,11 @@
  */
 - (void)initTabBarVC {
     // 将主视图指向Tabbar
-    _tabBarVC = [TabBarVC new];
+//    _tabBarVC = [TabBarVC new];
+    _loginVC  = [LoginVC new];
+    UINavigationController *navi = [[UINavigationController new] initWithRootViewController:self.loginVC];
     AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    appdelegate.window.rootViewController = _tabBarVC;
+    appdelegate.window.rootViewController = navi;
 }
 
 - (void)didReceiveMemoryWarning {

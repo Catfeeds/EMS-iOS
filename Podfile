@@ -6,4 +6,5 @@ target 'EMS' do
 	pod 'SVProgressHUD',  	   '~>2.1.2'
 	pod 'pop',		   '~>1.0.10'
 	pod 'Masonry',		   '~>1.0.2'
+	pod 'Mantle',		   '~>2.1.0'
 end

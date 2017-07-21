@@ -7,6 +7,7 @@
 //
 
 #import "GuideVC.h"
+#import "LoginVC.h"
 
 #define ImageCount 3
 @interface GuideVC ()<UIScrollViewDelegate>
@@ -51,8 +52,11 @@
 }
 - (void)handleTap:(UITapGestureRecognizer *)tap {
     DEFAULTS_SET_BOOL(YES, @"isFirst1");
-    TabBarVC *tabBar = [TabBarVC new];
-    [UIApplication sharedApplication].keyWindow.rootViewController = tabBar;
+//    TabBarVC *tabBar = [TabBarVC new];
+//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBar;
+    LoginVC *loginVC = [LoginVC new];
+    UINavigationController *navi = [[UINavigationController new] initWithRootViewController:loginVC];
+    [UIApplication sharedApplication].keyWindow.rootViewController = navi;
 }
 
 
