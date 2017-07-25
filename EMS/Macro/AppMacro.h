@@ -55,6 +55,8 @@
 
 #define APP_LOGIN_URL   @"/login/check.do"
 
+#define APP_REGISTER_URL @"/login/enrollajax.do"
+
 
 
 

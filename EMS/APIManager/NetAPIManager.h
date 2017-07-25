@@ -20,5 +20,8 @@
 
 // 登陆
 - (void)request_Login_WithParams:(id)params successBlock:(void (^)(id data))successBlock failure:(void(^)(id data,NSError *error))failureBlock;
+// 注册
+- (void)request_register_WithParams:(id)params successBlock:(void (^)(id data))successBlock failure:(void(^)(id data,NSError *error))failureBlock;
+
 
 @end

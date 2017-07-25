@@ -12,4 +12,6 @@
 
 @property (nonatomic,copy) NSString*username,*password;
 
+- (NSString *)goToLoginModelWithCheck; // 登录输入检查
+
 @end

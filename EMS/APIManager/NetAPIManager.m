@@ -7,6 +7,9 @@
 //
 
 #import "NetAPIManager.h"
+#import "LoginModel.h"
+#import "RequestModel.h"
+#import "BaseModel.h"
 
 @implementation NetAPIManager
 
@@ -42,14 +45,16 @@
     NSDictionary *requestDict = [MTLJSONAdapter JSONDictionaryFromModel:params error:nil];
     NSString *pathStr = APP_LOGIN_URL;
     [[NetRequestClient shareNetAPIClient] requestJsonDataWithPath:pathStr withParams:requestDict withMethedType:NetwrkType_Post autoShowProgressHUD:YES success:^(id data) {
-        DebugLog(@"登陆的JSON:%@",data);
+        RequestModel *loginModel = [MTLJSONAdapter modelOfClass:[RequestModel class] fromJSONDictionary:data error:nil];
+        DebugLog(@"登陆的JSON--:%@",loginModel);
+        successBlock(loginModel);
     } failure:^(id data, NSError *error) {
         DebugLog(@"登陆出错!");
     }];
 }
-
-
-
+- (void)request_register_WithParams:(id)params successBlock:(void (^)(id))successBlock failure:(void (^)(id, NSError *))failureBlock {
+    
+}
 
 
 

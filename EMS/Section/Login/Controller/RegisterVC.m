@@ -7,7 +7,8 @@
 //
 
 #import "RegisterVC.h"
-
+#import "RegisterModel.h"
+#import "RequestModel.h"
 
 @interface RegisterVC ()
 
@@ -18,7 +19,8 @@
 @property (nonatomic,strong) UITextField *confirmPawTF;
 @property (nonatomic,strong) UIButton *registerBtn;
 
-
+@property (nonatomic,strong) RequestModel *requestModel;
+//@property (nonatomic,strong) RegisterModel *registerModel;
 @end
 
 @implementation RegisterVC
@@ -252,12 +254,41 @@
 }
 
 - (void)handleRegister:(UIButton *)sender {
-    DebugLog(@"注册");
-    NSArray *array = @[_userAccountTF.text,_passwordTF.text];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(sendValueTypeString:)]) {
-        [self.delegate sendValueTypeString:array];
+    RegisterModel *registerM = [RegisterModel new];
+    registerM.userId = _userAccountTF.text;
+    registerM.userName = _nickNameTF.text;
+    registerM.password = _passwordTF.text;
+    registerM.fullName = _realNameTF.text;
+    NSString *isEmpty = [registerM checkIsEmpty];
+    if (isEmpty) {
+        [NSObject showInfoHudTipStr:isEmpty];
+        return;
     }
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if (_passwordTF.text != _confirmPawTF.text) {
+        [NSObject showInfoHudTipStr:@"两次输入的密码不一致!"];
+        return;
+    }
+    if ([_confirmPawTF.text  isEqual: @""]) {
+        [NSObject showInfoHudTipStr:@"请输入确认密码!"];
+        return;
+    }
+    NSDictionary *requestDict = [MTLJSONAdapter JSONDictionaryFromModel:registerM error:nil];
+    DebugLog(@"传递的参数%@",registerM);
+    [[NetAPIManager sharedManager] request_common_WithPath:APP_REGISTER_URL Params:requestDict autoShowProgressHUD:YES succesBlack:^(id data) {
+        RequestModel *requestModel = [MTLJSONAdapter modelOfClass:[RequestModel class] fromJSONDictionary:data error:nil];
+        if (requestModel.status == 0) {
+            [NSObject showSuccessHudTipStr:requestModel.msg];
+            NSArray *array = @[_userAccountTF.text,_passwordTF.text];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(sendValueTypeString:)]) {
+                [self.delegate sendValueTypeString:array];
+            }
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        
+    } failue:^(id data, NSError *error) {
+        
+    }];
+    DebugLog(@"注册");
 }
 
 - (void) handBack:(UIBarButtonItem *)sender {

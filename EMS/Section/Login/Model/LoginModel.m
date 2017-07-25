@@ -17,5 +17,17 @@
              };
 }
 
+- (NSString *)goToLoginModelWithCheck {
+    if (!_username || _username.length <= 0) {
+        return @"请输入用户名";
+    }
+    if (!_password || _password.length <= 0) {
+        return @"请输入密码";
+    }
+    return nil;
+}
+
+
+
 
 @end

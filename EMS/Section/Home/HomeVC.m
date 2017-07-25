@@ -7,6 +7,7 @@
 //
 
 #import "HomeVC.h"
+#import "BannerView.h"
 
 @interface HomeVC ()
 
@@ -16,15 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    
     [self configurationNavigation];
-
 }
 
 - (void) configurationNavigation {
-//    self.navigationItem.title = @"上海梓钦信息技术有限公司";
+    BannerView *banner = [[BannerView new] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 250) scrollDuration:3.f];
+    [self.view addSubview:banner];
+    banner.imageURLStrings = @[@"http://oot34wnx6.bkt.clouddn.com/apple.jpg", @"http://oot34wnx6.bkt.clouddn.com/apples.jpg", @"http://oot34wnx6.bkt.clouddn.com/iOS.png"];
+    banner.clickAction=^(NSInteger index) {
+        DebugLog(@"点击了%ld",index);
+    };
+}
+
+
+/**
+ * 初始化轮播图
+ */
+- (void) initBanner {
+    
 }
 
 - (void)didReceiveMemoryWarning {

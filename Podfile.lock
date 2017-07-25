@@ -18,23 +18,31 @@ PODS:
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
   - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
   - pop (1.0.10)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - Mantle (~> 2.1.0)
   - Masonry (~> 1.0.2)
+  - MBProgressHUD (~> 1.0.0)
   - pop (~> 1.0.10)
+  - SDWebImage (~> 4.0.0)
   - SVProgressHUD (~> 2.1.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: bb18b3e132c5f7397dd67a1bf74e8ddee39401af
+PODFILE CHECKSUM: 72c7dc22582dec645f588c879fe8201d590146fa
 
 COCOAPODS: 1.2.1

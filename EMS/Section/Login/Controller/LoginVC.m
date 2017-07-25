@@ -11,6 +11,9 @@
 #import "RegisterVC.h"
 #import "LoginModel.h"
 #import "NetAPIManager.h"
+#import "RequestModel.h"
+#import "BaseModel.h"
+
 @interface LoginVC ()<UINavigationControllerDelegate,RegisterVCDelegate>
 
 // 播放背景视频
@@ -26,6 +29,7 @@
 @property (nonatomic,strong) UILabel *resetPawLab;
 @property (nonatomic,strong) UIImageView *bgImageView;
 
+@property (nonatomic,strong) RequestModel *requestModel;
 
 @end
 
@@ -34,6 +38,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playVides) name:@"videGB" object:nil];
+    [self.view endEditing:YES];
 }
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -254,19 +259,21 @@
     loginModel.username = _userTF.text;
     loginModel.password = _passTF.text;
     
+    NSString *isEmpty  =[loginModel goToLoginModelWithCheck];
+    if (isEmpty) {
+        [NSObject showInfoHudTipStr:isEmpty];
+        return;
+    }
     [[NetAPIManager sharedManager] request_Login_WithParams:loginModel successBlock:^(id data) {
-        DebugLog(@"成功!")
+        DebugLog(@"登陆成功!%@",data);
+        self.requestModel = data;
+        [NSObject showSuccessHudTipStr:_requestModel.msg];
+            TabBarVC * tabBar = [TabBarVC new];
+            [self presentViewController:tabBar animated:YES completion:nil];
     } failure:^(id data, NSError *error) {
-        DebugLog(@"失败!");
+        DebugLog(@"登陆失败!");
     }];
-    
-    
-    
-    
     [self saveUserInfo];
-    
-//    TabBarVC * tabBar = [TabBarVC new];
-//    [self presentViewController:tabBar animated:YES completion:nil];
 }
 
 - (void) handlerJump:(UITapGestureRecognizer *)tap {
@@ -328,6 +335,7 @@
                                                   object:nil];
         
     }
+    _player.volume = 0;
     return _player;
 }
 

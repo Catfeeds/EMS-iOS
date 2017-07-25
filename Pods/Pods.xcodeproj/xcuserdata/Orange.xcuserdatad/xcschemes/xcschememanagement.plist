@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-EMS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +47,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4AAF4B30CE885D025300BAA5DB6CECBC</key>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D8BB0892D94693BE58591E9727E4F8D</key>
+		<key>5C503EB20C901C5329264685791922BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66B734F7914A440719CB3E013BCFBACA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C95250F4C7361DCAFE8A2488AC0A9F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0E51A38E5C42DA39C19C9E6D5CDF309</key>
+		<key>D52144DE9D7255DE912490FF5A806573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D52144DE9D7255DE912490FF5A806573</key>
+		<key>F26A85103F96D95B6BC78E2FE572CDCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

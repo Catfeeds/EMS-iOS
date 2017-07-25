@@ -63,6 +63,7 @@ static NetRequestClient *_sharedNetAPIClient = nil;
     if (autoShowProgressHUD) {
         // 显示加载狂
         DebugLog(@"菊花转");
+        [NSObject showProgressHUD];
         
     }
     // 开始输出
@@ -79,10 +80,10 @@ static NetRequestClient *_sharedNetAPIClient = nil;
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 DebugLog(@"菊花灭");
+                [NSObject dismissProgressHUD];
                 DebugLog(@"\n===========response===========\n%@:\n%@",path,responseObject);
                 // 开始判断JSON状态
-                id error = nil;
-                
+                id error = [NSObject handleResponse:responseObject autoShowError:autoShowError];
                 if (error) {
                     failureBlock(nil,error);
                 }else{
@@ -91,6 +92,7 @@ static NetRequestClient *_sharedNetAPIClient = nil;
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 DebugLog(@"菊花停");
+                [NSObject dismissProgressHUD];
                 DebugLog(@"\n===========response===========\n%@:\n%@", path, error);
                 failureBlock(nil,error);
             }];
@@ -101,9 +103,10 @@ static NetRequestClient *_sharedNetAPIClient = nil;
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 DebugLog(@"菊花灭");
+                [NSObject dismissProgressHUD];
                 DebugLog(@"\n===========response===========\n%@:\n%@",path,responseObject);
                 // 开始判断JSON状态
-                id error = nil;
+                id error = [NSObject handleResponse:responseObject autoShowError:autoShowError];
                 
                 if (error) {
                     failureBlock(nil,error);
@@ -113,7 +116,9 @@ static NetRequestClient *_sharedNetAPIClient = nil;
 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 DebugLog(@"菊花停");
+                [NSObject dismissProgressHUD];
                 DebugLog(@"\n===========response===========\n%@:\n%@", path, error);
+                [NSObject showError:error];
                 failureBlock(nil,error);
             }];
         }

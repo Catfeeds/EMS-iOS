@@ -377,6 +377,11 @@
 		C270D17E1F1E0BA500CD911B /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C270D1661F1E0BA500CD911B /* icon-76@2x.png */; };
 		C270D17F1F1E0BA500CD911B /* icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C270D1671F1E0BA500CD911B /* icon-83.5@2x.png */; };
 		C270D1841F1E127A00CD911B /* coverlog.png in Resources */ = {isa = PBXBuildFile; fileRef = C270D1831F1E127A00CD911B /* coverlog.png */; };
+		C281BE6A1F2727C900B22D09 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C281BE691F2727C900B22D09 /* RegisterModel.m */; };
+		C281BE6D1F2738B100B22D09 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C281BE6C1F2738B100B22D09 /* BannerView.m */; };
+		C28D21071F26E72000028738 /* NSObject+ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C28D21061F26E72000028738 /* NSObject+ProgressHUD.m */; };
+		C28D21131F27076A00028738 /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28D21121F27076A00028738 /* RequestModel.m */; };
+		C28D21161F270D0700028738 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28D21151F270D0700028738 /* BaseModel.m */; };
 		C2B11EF61F1F198B0087A507 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B11EF51F1F198B0087A507 /* cover.png */; };
 		C2D1A06F1F2039F300168968 /* UITextField+Lazy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D1A06E1F2039F300168968 /* UITextField+Lazy.m */; };
 		C2ED44941F1C81B700A753D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ED44931F1C81B700A753D8 /* main.m */; };
@@ -804,6 +809,16 @@
 		C270D1661F1E0BA500CD911B /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76@2x.png"; sourceTree = "<group>"; };
 		C270D1671F1E0BA500CD911B /* icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-83.5@2x.png"; sourceTree = "<group>"; };
 		C270D1831F1E127A00CD911B /* coverlog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverlog.png; sourceTree = "<group>"; };
+		C281BE681F2727C900B22D09 /* RegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
+		C281BE691F2727C900B22D09 /* RegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
+		C281BE6B1F2738B100B22D09 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		C281BE6C1F2738B100B22D09 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		C28D21051F26E72000028738 /* NSObject+ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ProgressHUD.h"; sourceTree = "<group>"; };
+		C28D21061F26E72000028738 /* NSObject+ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ProgressHUD.m"; sourceTree = "<group>"; };
+		C28D21111F27076A00028738 /* RequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestModel.h; sourceTree = "<group>"; };
+		C28D21121F27076A00028738 /* RequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestModel.m; sourceTree = "<group>"; };
+		C28D21141F270D0700028738 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		C28D21151F270D0700028738 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		C2B11EF51F1F198B0087A507 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		C2D1A06D1F2039F300168968 /* UITextField+Lazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Lazy.h"; sourceTree = "<group>"; };
 		C2D1A06E1F2039F300168968 /* UITextField+Lazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Lazy.m"; sourceTree = "<group>"; };
@@ -1254,6 +1269,8 @@
 		C21B0E6C1F1F247800939917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C281BE6B1F2738B100B22D09 /* BannerView.h */,
+				C281BE6C1F2738B100B22D09 /* BannerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1317,6 +1334,12 @@
 			children = (
 				C255FDD91F21FD21003F8DB1 /* LoginModel.h */,
 				C255FDDA1F21FD21003F8DB1 /* LoginModel.m */,
+				C28D21111F27076A00028738 /* RequestModel.h */,
+				C28D21121F27076A00028738 /* RequestModel.m */,
+				C28D21141F270D0700028738 /* BaseModel.h */,
+				C28D21151F270D0700028738 /* BaseModel.m */,
+				C281BE681F2727C900B22D09 /* RegisterModel.h */,
+				C281BE691F2727C900B22D09 /* RegisterModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1402,6 +1425,8 @@
 				C215A2DB1F204A440063ED5C /* UIButton+Lazy.m */,
 				C215A2DD1F204F0E0063ED5C /* NSString+Lazy.h */,
 				C215A2DE1F204F0E0063ED5C /* NSString+Lazy.m */,
+				C28D21051F26E72000028738 /* NSObject+ProgressHUD.h */,
+				C28D21061F26E72000028738 /* NSObject+ProgressHUD.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -2191,6 +2216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C281BE6A1F2727C900B22D09 /* RegisterModel.m in Sources */,
 				C255FDD21F2195F8003F8DB1 /* RegisterVC.m in Sources */,
 				C270D1231F1DD9DF00CD911B /* AppDelegate.m in Sources */,
 				C207413E1F1EF6C2000C4A99 /* GuideVC.m in Sources */,
@@ -2198,6 +2224,7 @@
 				C21B0E891F1F273700939917 /* MineVC.m in Sources */,
 				C270D1461F1DEADA00CD911B /* LaunchVC.m in Sources */,
 				C21B0E801F1F26EE00939917 /* HomeVC.m in Sources */,
+				C281BE6D1F2738B100B22D09 /* BannerView.m in Sources */,
 				C2ED44941F1C81B700A753D8 /* main.m in Sources */,
 				C21B0E8C1F1F275500939917 /* ContactVC.m in Sources */,
 				C255FDDB1F21FD21003F8DB1 /* LoginModel.m in Sources */,
@@ -2207,9 +2234,12 @@
 				C21B0EA91F1F5D4300939917 /* UILabel+Lazy.m in Sources */,
 				C270D14A1F1DF52B00CD911B /* CoverVC.m in Sources */,
 				C270D14D1F1DF55C00CD911B /* TabBarVC.m in Sources */,
+				C28D21071F26E72000028738 /* NSObject+ProgressHUD.m in Sources */,
+				C28D21131F27076A00028738 /* RequestModel.m in Sources */,
 				C255FDD51F21DC9F003F8DB1 /* NetRequestClient.m in Sources */,
 				C215A2DF1F204F0E0063ED5C /* NSString+Lazy.m in Sources */,
 				C215A2DC1F204A440063ED5C /* UIButton+Lazy.m in Sources */,
+				C28D21161F270D0700028738 /* BaseModel.m in Sources */,
 				C2D1A06F1F2039F300168968 /* UITextField+Lazy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
