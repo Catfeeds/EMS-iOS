@@ -27,6 +27,8 @@
 #import "Mantle.h"
 #import "MBProgressHUD.h"
 #import "SDWebImage/UIImageView+WebCache.h"
+#import "SDCycleScrollView.h"
+
 
 #pragma mark - Categories
 #import "UILabel+Lazy.h"

@@ -9,4 +9,5 @@ target 'EMS' do
 	pod 'Mantle',		   '~>2.1.0'
 	pod 'MBProgressHUD',	   '~>1.0.0'
 	pod 'SDWebImage',	   '~>4.0.0'
+	pod 'SDCycleScrollView',   '~>1.66'
 end
