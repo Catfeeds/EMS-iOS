@@ -344,6 +344,9 @@
 		C21B0E8C1F1F275500939917 /* ContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B0E8B1F1F275500939917 /* ContactVC.m */; };
 		C21B0E8F1F1F29B900939917 /* BaseNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B0E8E1F1F29B900939917 /* BaseNavigationVC.m */; };
 		C21B0EA91F1F5D4300939917 /* UILabel+Lazy.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B0EA81F1F5D4300939917 /* UILabel+Lazy.m */; };
+		C22852E91F299ABC00D2B625 /* XMRippleShadowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22852E81F299ABB00D2B625 /* XMRippleShadowCell.m */; };
+		C22852EF1F29D11500D2B625 /* TipsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22852EE1F29D11500D2B625 /* TipsTableViewCell.m */; };
+		C22852F21F29DCF200D2B625 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22852F11F29DCF200D2B625 /* SettingTableViewCell.m */; };
 		C255FDD21F2195F8003F8DB1 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C255FDD11F2195F8003F8DB1 /* RegisterVC.m */; };
 		C255FDD51F21DC9F003F8DB1 /* NetRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C255FDD41F21DC9F003F8DB1 /* NetRequestClient.m */; };
 		C255FDD81F21F163003F8DB1 /* NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C255FDD71F21F163003F8DB1 /* NetAPIManager.m */; };
@@ -761,6 +764,12 @@
 		C21B0E901F1F2A6D00939917 /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		C21B0EA71F1F5D4300939917 /* UILabel+Lazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Lazy.h"; sourceTree = "<group>"; };
 		C21B0EA81F1F5D4300939917 /* UILabel+Lazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Lazy.m"; sourceTree = "<group>"; };
+		C22852E71F299ABB00D2B625 /* XMRippleShadowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMRippleShadowCell.h; sourceTree = "<group>"; };
+		C22852E81F299ABB00D2B625 /* XMRippleShadowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMRippleShadowCell.m; sourceTree = "<group>"; };
+		C22852ED1F29D11500D2B625 /* TipsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsTableViewCell.h; sourceTree = "<group>"; };
+		C22852EE1F29D11500D2B625 /* TipsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsTableViewCell.m; sourceTree = "<group>"; };
+		C22852F01F29DCF200D2B625 /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		C22852F11F29DCF200D2B625 /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 		C255FDD01F2195F8003F8DB1 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		C255FDD11F2195F8003F8DB1 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		C255FDD31F21DC9F003F8DB1 /* NetRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequestClient.h; sourceTree = "<group>"; };
@@ -1272,6 +1281,8 @@
 		C21B0E6C1F1F247800939917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C22852E71F299ABB00D2B625 /* XMRippleShadowCell.h */,
+				C22852E81F299ABB00D2B625 /* XMRippleShadowCell.m */,
 				C2892B6D1F283C710027F8E9 /* VerticalTextLoopView.h */,
 				C2892B6E1F283C710027F8E9 /* VerticalTextLoopView.m */,
 				C2892B701F2874670027F8E9 /* HomeTableViewCell.h */,
@@ -1385,6 +1396,10 @@
 		C21B0E781F1F247800939917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C22852ED1F29D11500D2B625 /* TipsTableViewCell.h */,
+				C22852EE1F29D11500D2B625 /* TipsTableViewCell.m */,
+				C22852F01F29DCF200D2B625 /* SettingTableViewCell.h */,
+				C22852F11F29DCF200D2B625 /* SettingTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2231,11 +2246,13 @@
 				C270D1461F1DEADA00CD911B /* LaunchVC.m in Sources */,
 				C21B0E801F1F26EE00939917 /* HomeVC.m in Sources */,
 				C2ED44941F1C81B700A753D8 /* main.m in Sources */,
+				C22852F21F29DCF200D2B625 /* SettingTableViewCell.m in Sources */,
 				C21B0E8C1F1F275500939917 /* ContactVC.m in Sources */,
 				C255FDDB1F21FD21003F8DB1 /* LoginModel.m in Sources */,
 				C21B0E831F1F271500939917 /* LogVC.m in Sources */,
 				C21B0E8F1F1F29B900939917 /* BaseNavigationVC.m in Sources */,
 				C255FDD81F21F163003F8DB1 /* NetAPIManager.m in Sources */,
+				C22852E91F299ABC00D2B625 /* XMRippleShadowCell.m in Sources */,
 				C21B0EA91F1F5D4300939917 /* UILabel+Lazy.m in Sources */,
 				C270D14A1F1DF52B00CD911B /* CoverVC.m in Sources */,
 				C270D14D1F1DF55C00CD911B /* TabBarVC.m in Sources */,
@@ -2245,6 +2262,7 @@
 				C215A2DF1F204F0E0063ED5C /* NSString+Lazy.m in Sources */,
 				C2892B721F2874670027F8E9 /* HomeTableViewCell.m in Sources */,
 				C215A2DC1F204A440063ED5C /* UIButton+Lazy.m in Sources */,
+				C22852EF1F29D11500D2B625 /* TipsTableViewCell.m in Sources */,
 				C28D21161F270D0700028738 /* BaseModel.m in Sources */,
 				C2D1A06F1F2039F300168968 /* UITextField+Lazy.m in Sources */,
 			);

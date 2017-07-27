@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMRippleShadowCell.h"
 
-@interface HomeTableViewCell : UITableViewCell
+@interface HomeTableViewCell : XMRippleShadowCell
 
 @property (nonatomic,strong) UIImageView *home_Pic;
 @property (nonatomic,strong) UILabel *title_LB,*content_LB;

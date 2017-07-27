@@ -51,6 +51,8 @@
 
 #pragma mark - 接口相关
 
+#define APP_IMAGE_URL  @"http://oot34wnx6.bkt.clouddn.com/"
+
 #define APP_BASE_URL   @"http://192.168.0.101:8080"
 
 #define APP_LOGIN_URL   @"/login/check.do"

@@ -34,7 +34,7 @@
     self.view.backgroundColor = APP_COLOR_BASE_HOME_BG;
     self.headView = [UIView new];
     _headView.frame = VIEWFRAME(0, 64, SCREEN_WIDTH, 293);
-    _headView.backgroundColor = [UIColor orangeColor];
+    _headView.backgroundColor = APP_COLOR_BASE_HOME_BG;
 //    [self.view addSubview:self.headView];
     [self initBanner];
     [self initNotifyMsg];
@@ -65,7 +65,7 @@
 - (void) initNotifyMsg {
     self.cardView = [[UIView new] initWithFrame:CGRectZero];
 //    _cardView.frame = VIEWFRAME(10, 258, SCREEN_WIDTH-20, 35);
-    _cardView.backgroundColor = [UIColor orangeColor];
+    _cardView.backgroundColor = [UIColor whiteColor];
     _cardView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
     _cardView.layer.shadowOffset = CGSizeMake(0, 3);
     _cardView.layer.shadowOpacity = 0.4;
@@ -97,9 +97,9 @@
     [_cardView addSubview:go];
     
     [_cardView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_sdcycleScrollView.mas_bottom).offset(8);
-        make.left.equalTo(_headView.mas_left).with.offset(10);
-        make.right.equalTo(_headView.mas_right).with.offset(-10);
+        make.top.equalTo(_headView.mas_top).offset(258);
+        make.left.equalTo(_headView).with.offset(10);
+        make.right.equalTo(_headView).with.offset(-10);
         make.height.mas_equalTo(@35);
     }];
 
@@ -120,17 +120,9 @@
         make.right.equalTo(_cardView.mas_right).with.offset(-31);
         make.height.equalTo(@35);
     }];
-    
-//    [_verticalTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(cardView.mas_bottom).with.offset(0);
-//        make.left.equalTo(line.mas_right).with.offset(8);
-//        make.right.equalTo(go.mas_left).with.offset(-31);
-////        make.height.mas_equalTo(@35);
-//    }];
     [go mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_cardView.mas_top).with.offset(10);
         make.left.equalTo(zhanwei.mas_right).with.offset(8);
-//        make.right.equalTo(cardView.mas_left).with.offset(0);
         make.size.mas_equalTo(CGSizeMake(15, 15));
     }];
     
@@ -156,7 +148,7 @@
     [self.view addSubview:_tableView];
     _weekSelf(weakSelf);
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_cardView.mas_bottom).with.offset(0);
+        make.top.equalTo(weakSelf.view.mas_top).with.offset(0);
         make.right.equalTo(weakSelf.view.mas_right).with.offset(0);
         make.left.equalTo(weakSelf.view.mas_left).with.offset(0);
         make.height.mas_equalTo(SCREEN_HIGHT-64);
