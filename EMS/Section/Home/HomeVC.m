@@ -19,6 +19,7 @@
 @property (nonatomic,strong) NSArray *titleArr;
 @property (nonatomic,strong) NSArray *imageArr;
 @property (nonatomic,strong) UIScrollView *scrollView;
+@property (nonatomic,strong) UIView *headView;
 
 @end
 
@@ -31,9 +32,10 @@
 
 - (void) configurationNavigation {
     self.view.backgroundColor = APP_COLOR_BASE_HOME_BG;
-    self.scrollView = [[UIScrollView new] initWithFrame:VIEWFRAME(0, 0, SCREEN_WIDTH, SCREEN_HIGHT)];
-//    _scrollView.delegate = self;
-    [self.view addSubview:_scrollView];
+    self.headView = [UIView new];
+    _headView.frame = VIEWFRAME(0, 64, SCREEN_WIDTH, 293);
+    _headView.backgroundColor = [UIColor orangeColor];
+//    [self.view addSubview:self.headView];
     [self initBanner];
     [self initNotifyMsg];
     [self initTableView];
@@ -47,12 +49,12 @@
     NSArray *imageUrls = @[@"http://oot34wnx6.bkt.clouddn.com/apple.jpg",
                            @"http://oot34wnx6.bkt.clouddn.com/apples.jpg",
                            @"http://oot34wnx6.bkt.clouddn.com/iOS.png"];
-    self.sdcycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:VIEWFRAME(0, 64, SCREEN_WIDTH, 250) delegate:self placeholderImage:[UIImage imageNamed:@"placerholder"]];
+    self.sdcycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:VIEWFRAME(0, 0, SCREEN_WIDTH, 250) delegate:self placeholderImage:[UIImage imageNamed:@"placerholder"]];
     _sdcycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     _sdcycleScrollView.currentPageDotColor = APP_COLOR_BASE_NAV;
     _sdcycleScrollView.pageDotColor = [UIColor whiteColor];
     _sdcycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
-    [self.view addSubview:_sdcycleScrollView];
+    [_headView addSubview:_sdcycleScrollView];
     _sdcycleScrollView.imageURLStringsGroup = imageUrls;
 }
 
@@ -62,13 +64,13 @@
  */
 - (void) initNotifyMsg {
     self.cardView = [[UIView new] initWithFrame:CGRectZero];
-    _cardView.backgroundColor = [UIColor whiteColor];
+//    _cardView.frame = VIEWFRAME(10, 258, SCREEN_WIDTH-20, 35);
+    _cardView.backgroundColor = [UIColor orangeColor];
     _cardView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
     _cardView.layer.shadowOffset = CGSizeMake(0, 3);
     _cardView.layer.shadowOpacity = 0.4;
     _cardView.layer.shadowRadius = 10;
-    [self.view addSubview:_cardView];
-    _weekSelf(weakSelf);
+    [_headView addSubview:_cardView];
     UIImageView *notifyPic = [[UIImageView new] initWithFrame:CGRectZero];
     notifyPic.image = [UIImage imageNamed:@"notice"];
     [_cardView addSubview:notifyPic];
@@ -95,9 +97,9 @@
     [_cardView addSubview:go];
     
     [_cardView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.sdcycleScrollView.mas_bottom).with.offset(8);
-        make.left.equalTo(weakSelf.view).with.offset(10);
-        make.right.equalTo(weakSelf.view).with.offset(-10);
+        make.top.equalTo(_sdcycleScrollView.mas_bottom).offset(8);
+        make.left.equalTo(_headView.mas_left).with.offset(10);
+        make.right.equalTo(_headView.mas_right).with.offset(-10);
         make.height.mas_equalTo(@35);
     }];
 
@@ -148,6 +150,7 @@
     _tableView.dataSource = self;
     _tableView.separatorStyle = NO;
     _tableView.bounces = NO;
+    _tableView.tableHeaderView = _headView;
     _tableView.backgroundColor = [UIColor orangeColor];
     [_tableView registerClass:[HomeTableViewCell class] forCellReuseIdentifier:@"homeCell"];
     [self.view addSubview:_tableView];
@@ -156,7 +159,7 @@
         make.top.equalTo(_cardView.mas_bottom).with.offset(0);
         make.right.equalTo(weakSelf.view.mas_right).with.offset(0);
         make.left.equalTo(weakSelf.view.mas_left).with.offset(0);
-        make.height.mas_equalTo(SCREEN_HIGHT-250-43-64-44);
+        make.height.mas_equalTo(SCREEN_HIGHT-64);
     }];
     
 }
