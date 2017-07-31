@@ -12,6 +12,12 @@
 		C20741421F1F01CD000C4A99 /* welcome1.png in Resources */ = {isa = PBXBuildFile; fileRef = C207413F1F1F01CD000C4A99 /* welcome1.png */; };
 		C20741431F1F01CD000C4A99 /* welcome2.png in Resources */ = {isa = PBXBuildFile; fileRef = C20741401F1F01CD000C4A99 /* welcome2.png */; };
 		C20741441F1F01CD000C4A99 /* welcome3.png in Resources */ = {isa = PBXBuildFile; fileRef = C20741411F1F01CD000C4A99 /* welcome3.png */; };
+		C21518E91F2EF43B004C78D9 /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = C21518E81F2EF43B004C78D9 /* NSString+PinYin.m */; };
+		C21518EC1F2F0193004C78D9 /* UITableView+IndexTip.m in Sources */ = {isa = PBXBuildFile; fileRef = C21518EB1F2F0193004C78D9 /* UITableView+IndexTip.m */; };
+		C21518EF1F2F035C004C78D9 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = C21518EE1F2F035C004C78D9 /* Aspects.m */; };
+		C21518FC1F2F1FE3004C78D9 /* TableViewIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = C21518FA1F2F1FE3004C78D9 /* TableViewIndexView.m */; };
+		C21518FD1F2F1FE3004C78D9 /* TableViewIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21518FB1F2F1FE3004C78D9 /* TableViewIndexView.xib */; };
+		C21519001F2F2A66004C78D9 /* ContactTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C21518FF1F2F2A66004C78D9 /* ContactTabCell.m */; };
 		C215A2DC1F204A440063ED5C /* UIButton+Lazy.m in Sources */ = {isa = PBXBuildFile; fileRef = C215A2DB1F204A440063ED5C /* UIButton+Lazy.m */; };
 		C215A2DF1F204F0E0063ED5C /* NSString+Lazy.m in Sources */ = {isa = PBXBuildFile; fileRef = C215A2DE1F204F0E0063ED5C /* NSString+Lazy.m */; };
 		C215A2E21F2074920063ED5C /* videbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C215A2E11F2074920063ED5C /* videbg.mp4 */; };
@@ -422,6 +428,17 @@
 		C207413F1F1F01CD000C4A99 /* welcome1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome1.png; sourceTree = "<group>"; };
 		C20741401F1F01CD000C4A99 /* welcome2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome2.png; sourceTree = "<group>"; };
 		C20741411F1F01CD000C4A99 /* welcome3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome3.png; sourceTree = "<group>"; };
+		C21518E71F2EF43B004C78D9 /* NSString+PinYin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin.h"; sourceTree = "<group>"; };
+		C21518E81F2EF43B004C78D9 /* NSString+PinYin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin.m"; sourceTree = "<group>"; };
+		C21518EA1F2F0193004C78D9 /* UITableView+IndexTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+IndexTip.h"; sourceTree = "<group>"; };
+		C21518EB1F2F0193004C78D9 /* UITableView+IndexTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+IndexTip.m"; sourceTree = "<group>"; };
+		C21518ED1F2F035C004C78D9 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		C21518EE1F2F035C004C78D9 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		C21518F91F2F1FE3004C78D9 /* TableViewIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewIndexView.h; sourceTree = "<group>"; };
+		C21518FA1F2F1FE3004C78D9 /* TableViewIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewIndexView.m; sourceTree = "<group>"; };
+		C21518FB1F2F1FE3004C78D9 /* TableViewIndexView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewIndexView.xib; sourceTree = "<group>"; };
+		C21518FE1F2F2A66004C78D9 /* ContactTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTabCell.h; sourceTree = "<group>"; };
+		C21518FF1F2F2A66004C78D9 /* ContactTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTabCell.m; sourceTree = "<group>"; };
 		C215A2DA1F204A440063ED5C /* UIButton+Lazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Lazy.h"; sourceTree = "<group>"; };
 		C215A2DB1F204A440063ED5C /* UIButton+Lazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Lazy.m"; sourceTree = "<group>"; };
 		C215A2DD1F204F0E0063ED5C /* NSString+Lazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Lazy.h"; sourceTree = "<group>"; };
@@ -1248,6 +1265,8 @@
 		C21B0E681F1F247800939917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C21518FE1F2F2A66004C78D9 /* ContactTabCell.h */,
+				C21518FF1F2F2A66004C78D9 /* ContactTabCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1423,6 +1442,11 @@
 		C21B0E7B1F1F25FD00939917 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C21518F91F2F1FE3004C78D9 /* TableViewIndexView.h */,
+				C21518FA1F2F1FE3004C78D9 /* TableViewIndexView.m */,
+				C21518FB1F2F1FE3004C78D9 /* TableViewIndexView.xib */,
+				C21518ED1F2F035C004C78D9 /* Aspects.h */,
+				C21518EE1F2F035C004C78D9 /* Aspects.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1437,6 +1461,8 @@
 		C21B0E7D1F1F25FD00939917 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C21518E71F2EF43B004C78D9 /* NSString+PinYin.h */,
+				C21518E81F2EF43B004C78D9 /* NSString+PinYin.m */,
 				C21B0EA71F1F5D4300939917 /* UILabel+Lazy.h */,
 				C21B0EA81F1F5D4300939917 /* UILabel+Lazy.m */,
 				C2D1A06D1F2039F300168968 /* UITextField+Lazy.h */,
@@ -1447,6 +1473,8 @@
 				C215A2DE1F204F0E0063ED5C /* NSString+Lazy.m */,
 				C28D21051F26E72000028738 /* NSObject+ProgressHUD.h */,
 				C28D21061F26E72000028738 /* NSObject+ProgressHUD.m */,
+				C21518EA1F2F0193004C78D9 /* UITableView+IndexTip.h */,
+				C21518EB1F2F0193004C78D9 /* UITableView+IndexTip.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1890,6 +1918,7 @@
 				C215A4C01F2097840063ED5C /* oacompany.png in Resources */,
 				C215A4E31F2097840063ED5C /* picthree.png in Resources */,
 				C215A5321F2097840063ED5C /* time_tips.png in Resources */,
+				C21518FD1F2F1FE3004C78D9 /* TableViewIndexView.xib in Resources */,
 				C215A43E1F2097840063ED5C /* btn_click_red_havebackground.xml in Resources */,
 				C215A49D1F2097840063ED5C /* input_update.png in Resources */,
 				C215A4F61F2097840063ED5C /* radio_unselect.png in Resources */,
@@ -2245,21 +2274,26 @@
 				C21B0E891F1F273700939917 /* MineVC.m in Sources */,
 				C270D1461F1DEADA00CD911B /* LaunchVC.m in Sources */,
 				C21B0E801F1F26EE00939917 /* HomeVC.m in Sources */,
+				C21518FC1F2F1FE3004C78D9 /* TableViewIndexView.m in Sources */,
 				C2ED44941F1C81B700A753D8 /* main.m in Sources */,
 				C22852F21F29DCF200D2B625 /* SettingTableViewCell.m in Sources */,
 				C21B0E8C1F1F275500939917 /* ContactVC.m in Sources */,
 				C255FDDB1F21FD21003F8DB1 /* LoginModel.m in Sources */,
+				C21519001F2F2A66004C78D9 /* ContactTabCell.m in Sources */,
 				C21B0E831F1F271500939917 /* LogVC.m in Sources */,
 				C21B0E8F1F1F29B900939917 /* BaseNavigationVC.m in Sources */,
 				C255FDD81F21F163003F8DB1 /* NetAPIManager.m in Sources */,
 				C22852E91F299ABC00D2B625 /* XMRippleShadowCell.m in Sources */,
 				C21B0EA91F1F5D4300939917 /* UILabel+Lazy.m in Sources */,
+				C21518EC1F2F0193004C78D9 /* UITableView+IndexTip.m in Sources */,
 				C270D14A1F1DF52B00CD911B /* CoverVC.m in Sources */,
 				C270D14D1F1DF55C00CD911B /* TabBarVC.m in Sources */,
 				C28D21071F26E72000028738 /* NSObject+ProgressHUD.m in Sources */,
 				C28D21131F27076A00028738 /* RequestModel.m in Sources */,
+				C21518EF1F2F035C004C78D9 /* Aspects.m in Sources */,
 				C255FDD51F21DC9F003F8DB1 /* NetRequestClient.m in Sources */,
 				C215A2DF1F204F0E0063ED5C /* NSString+Lazy.m in Sources */,
+				C21518E91F2EF43B004C78D9 /* NSString+PinYin.m in Sources */,
 				C2892B721F2874670027F8E9 /* HomeTableViewCell.m in Sources */,
 				C215A2DC1F204A440063ED5C /* UIButton+Lazy.m in Sources */,
 				C22852EF1F29D11500D2B625 /* TipsTableViewCell.m in Sources */,

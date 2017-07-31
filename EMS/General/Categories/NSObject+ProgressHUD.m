@@ -39,6 +39,7 @@
     [SVProgressHUD setForegroundColor:[UIColor whiteColor] ];
     [SVProgressHUD showSuccessWithStatus:tipStr];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD dismissWithDelay:0.5];
 //    [SVProgressHUD showSuccessWithStatus:tipStr maskType:SVProgressHUDMaskTypeBlack];
 }
 
@@ -47,6 +48,7 @@
     [SVProgressHUD setForegroundColor:[UIColor whiteColor] ];
     [SVProgressHUD showInfoWithStatus:tipStr];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD dismissWithDelay:0.5];
 //    [SVProgressHUD showInfoWithStatus:tipStr maskType:SVProgressHUDMaskTypeBlack];
 }
 

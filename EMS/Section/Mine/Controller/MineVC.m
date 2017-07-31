@@ -199,7 +199,7 @@
     [self.view addSubview:_sectionTableView];
     _weekSelf(weakSelf);
     [_sectionTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.view.mas_top).offset(0);
+        make.top.equalTo(weakSelf.view.mas_top).offset(-20);
         make.left.equalTo(weakSelf.view.mas_left).offset(0);
         make.right.equalTo(weakSelf.view.mas_right).offset(0);
         make.size.mas_offset(CGSizeMake(SCREEN_WIDTH, SCREEN_HIGHT));
