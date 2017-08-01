@@ -19,6 +19,7 @@ PODS:
   - Mantle/extobjc (2.1.0)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
   - pop (1.0.10)
   - SDCycleScrollView (1.66):
     - SDWebImage (~> 4.0.0)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Mantle (~> 2.1.0)
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.0.0)
+  - MJRefresh (~> 3.1.12)
   - pop (~> 1.0.10)
   - SDCycleScrollView (~> 1.66)
   - SDWebImage (~> 4.0.0)
@@ -42,11 +44,12 @@ SPEC CHECKSUMS:
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 0fd0bf6455a6bb9f65c41265a4232e961cfdb41c
+PODFILE CHECKSUM: 77349434b2d25bd28d1a4c45a98f2b81b9b7d3f3
 
 COCOAPODS: 1.2.1

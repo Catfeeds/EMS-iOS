@@ -10,4 +10,5 @@ target 'EMS' do
 	pod 'MBProgressHUD',	   '~>1.0.0'
 	pod 'SDWebImage',	   '~>4.0.0'
 	pod 'SDCycleScrollView',   '~>1.66'
+	pod 'MJRefresh',	   '~>3.1.12'
 end

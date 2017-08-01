@@ -28,6 +28,7 @@
 #import "MBProgressHUD.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "SDCycleScrollView.h"
+#import "MJRefresh.h"
 
 
 #pragma mark - Categories

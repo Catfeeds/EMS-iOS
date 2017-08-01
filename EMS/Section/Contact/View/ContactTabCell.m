@@ -20,20 +20,21 @@
         line.backgroundColor = APP_COLOR_BASE_HOME_BG;
         [self.contentView addSubview:line];
         
+        
         _weekSelf(weakSelf);
         [_portailIV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.contentView.mas_top).offset(10);
-            make.left.equalTo(weakSelf.contentView.mas_left).offset(35);
-            make.size.mas_equalTo(CGSizeMake(35, 35));
+            make.centerY.equalTo(weakSelf.contentView).offset(0);
+            make.left.equalTo(weakSelf.contentView.mas_left).offset(30);
+            make.size.mas_equalTo(CGSizeMake(32, 32));
         }];
         [_nameLB mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(weakSelf.contentView.mas_top).offset(13);
-            make.left.equalTo(weakSelf.portailIV.mas_right).offset(13);
+            make.centerY.equalTo(weakSelf.contentView).offset(0);
+            make.left.equalTo(weakSelf.portailIV.mas_right).offset(15);
             make.right.equalTo(weakSelf.contentView.mas_right).offset(35);
             make.height.mas_equalTo(@35);
         }];
         [line mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_nameLB.mas_bottom).offset(9);
+            make.top.equalTo(_nameLB.mas_bottom).offset(7);
             make.left.equalTo(weakSelf.contentView.mas_left).offset(0);
             make.right.equalTo(weakSelf.contentView.mas_right).offset(0);
             make.height.equalTo(@1);

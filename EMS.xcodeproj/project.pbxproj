@@ -26,7 +26,7 @@
 		C215A4291F2097840063ED5C /* aa.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2E81F2097830063ED5C /* aa.png */; };
 		C215A42A1F2097840063ED5C /* about_us.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2E91F2097830063ED5C /* about_us.png */; };
 		C215A42B1F2097840063ED5C /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2EA1F2097830063ED5C /* account.png */; };
-		C215A42C1F2097840063ED5C /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2EB1F2097830063ED5C /* add.png */; };
+		C215A42C1F2097840063ED5C /* adds.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2EB1F2097830063ED5C /* adds.png */; };
 		C215A42D1F2097840063ED5C /* add_region.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2EC1F2097830063ED5C /* add_region.png */; };
 		C215A42E1F2097840063ED5C /* addcompany.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2ED1F2097830063ED5C /* addcompany.png */; };
 		C215A42F1F2097840063ED5C /* addresss.png in Resources */ = {isa = PBXBuildFile; fileRef = C215A2EE1F2097830063ED5C /* addresss.png */; };
@@ -350,6 +350,8 @@
 		C21B0E8C1F1F275500939917 /* ContactVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B0E8B1F1F275500939917 /* ContactVC.m */; };
 		C21B0E8F1F1F29B900939917 /* BaseNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B0E8E1F1F29B900939917 /* BaseNavigationVC.m */; };
 		C21B0EA91F1F5D4300939917 /* UILabel+Lazy.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B0EA81F1F5D4300939917 /* UILabel+Lazy.m */; };
+		C21D7D151F303273005C0030 /* DraggableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C21D7D141F303273005C0030 /* DraggableButton.m */; };
+		C21D7D181F3050B5005C0030 /* LogTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C21D7D171F3050B4005C0030 /* LogTabViewCell.m */; };
 		C22852E91F299ABC00D2B625 /* XMRippleShadowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22852E81F299ABB00D2B625 /* XMRippleShadowCell.m */; };
 		C22852EF1F29D11500D2B625 /* TipsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22852EE1F29D11500D2B625 /* TipsTableViewCell.m */; };
 		C22852F21F29DCF200D2B625 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22852F11F29DCF200D2B625 /* SettingTableViewCell.m */; };
@@ -449,7 +451,7 @@
 		C215A2E81F2097830063ED5C /* aa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aa.png; sourceTree = "<group>"; };
 		C215A2E91F2097830063ED5C /* about_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_us.png; sourceTree = "<group>"; };
 		C215A2EA1F2097830063ED5C /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
-		C215A2EB1F2097830063ED5C /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		C215A2EB1F2097830063ED5C /* adds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adds.png; sourceTree = "<group>"; };
 		C215A2EC1F2097830063ED5C /* add_region.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_region.png; sourceTree = "<group>"; };
 		C215A2ED1F2097830063ED5C /* addcompany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addcompany.png; sourceTree = "<group>"; };
 		C215A2EE1F2097830063ED5C /* addresss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addresss.png; sourceTree = "<group>"; };
@@ -781,6 +783,10 @@
 		C21B0E901F1F2A6D00939917 /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		C21B0EA71F1F5D4300939917 /* UILabel+Lazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Lazy.h"; sourceTree = "<group>"; };
 		C21B0EA81F1F5D4300939917 /* UILabel+Lazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Lazy.m"; sourceTree = "<group>"; };
+		C21D7D131F303273005C0030 /* DraggableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableButton.h; sourceTree = "<group>"; };
+		C21D7D141F303273005C0030 /* DraggableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableButton.m; sourceTree = "<group>"; };
+		C21D7D161F3050B4005C0030 /* LogTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTabViewCell.h; sourceTree = "<group>"; };
+		C21D7D171F3050B4005C0030 /* LogTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTabViewCell.m; sourceTree = "<group>"; };
 		C22852E71F299ABB00D2B625 /* XMRippleShadowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMRippleShadowCell.h; sourceTree = "<group>"; };
 		C22852E81F299ABB00D2B625 /* XMRippleShadowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMRippleShadowCell.m; sourceTree = "<group>"; };
 		C22852ED1F29D11500D2B625 /* TipsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsTableViewCell.h; sourceTree = "<group>"; };
@@ -915,7 +921,7 @@
 				C215A2E81F2097830063ED5C /* aa.png */,
 				C215A2E91F2097830063ED5C /* about_us.png */,
 				C215A2EA1F2097830063ED5C /* account.png */,
-				C215A2EB1F2097830063ED5C /* add.png */,
+				C215A2EB1F2097830063ED5C /* adds.png */,
 				C215A2EC1F2097830063ED5C /* add_region.png */,
 				C215A2ED1F2097830063ED5C /* addcompany.png */,
 				C215A2EE1F2097830063ED5C /* addresss.png */,
@@ -1339,6 +1345,8 @@
 		C21B0E701F1F247800939917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C21D7D161F3050B4005C0030 /* LogTabViewCell.h */,
+				C21D7D171F3050B4005C0030 /* LogTabViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1442,6 +1450,8 @@
 		C21B0E7B1F1F25FD00939917 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C21D7D131F303273005C0030 /* DraggableButton.h */,
+				C21D7D141F303273005C0030 /* DraggableButton.m */,
 				C21518F91F2F1FE3004C78D9 /* TableViewIndexView.h */,
 				C21518FA1F2F1FE3004C78D9 /* TableViewIndexView.m */,
 				C21518FB1F2F1FE3004C78D9 /* TableViewIndexView.xib */,
@@ -1924,7 +1934,7 @@
 				C215A4F61F2097840063ED5C /* radio_unselect.png in Resources */,
 				C215A4CF1F2097840063ED5C /* oo.png in Resources */,
 				C215A52F1F2097840063ED5C /* three_unselect.png in Resources */,
-				C215A42C1F2097840063ED5C /* add.png in Resources */,
+				C215A42C1F2097840063ED5C /* adds.png in Resources */,
 				C215A4C61F2097840063ED5C /* oee.png in Resources */,
 				C215A5391F2097840063ED5C /* u.png in Resources */,
 				C215A52D1F2097840063ED5C /* three.xml in Resources */,
@@ -2292,6 +2302,7 @@
 				C28D21131F27076A00028738 /* RequestModel.m in Sources */,
 				C21518EF1F2F035C004C78D9 /* Aspects.m in Sources */,
 				C255FDD51F21DC9F003F8DB1 /* NetRequestClient.m in Sources */,
+				C21D7D181F3050B5005C0030 /* LogTabViewCell.m in Sources */,
 				C215A2DF1F204F0E0063ED5C /* NSString+Lazy.m in Sources */,
 				C21518E91F2EF43B004C78D9 /* NSString+PinYin.m in Sources */,
 				C2892B721F2874670027F8E9 /* HomeTableViewCell.m in Sources */,
@@ -2299,6 +2310,7 @@
 				C22852EF1F29D11500D2B625 /* TipsTableViewCell.m in Sources */,
 				C28D21161F270D0700028738 /* BaseModel.m in Sources */,
 				C2D1A06F1F2039F300168968 /* UITextField+Lazy.m in Sources */,
+				C21D7D151F303273005C0030 /* DraggableButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -157,10 +157,12 @@
         
     }
     cell.nameLB.text = name;
+    NSArray *imageUrls = @[@"pera",@"perb",@"perc",@"perd",@"perf",@"perg"];
+    cell.portailIV.image = [UIImage imageNamed:[imageUrls objectAtIndex:3]];
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 62;
+    return 52;
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 20)];
