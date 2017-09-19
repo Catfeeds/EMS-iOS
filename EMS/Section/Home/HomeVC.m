@@ -9,6 +9,8 @@
 #import "HomeVC.h"
 #import "VerticalTextLoopView.h"
 #import "HomeTableViewCell.h"
+#import "CommonVC.h"
+#import "UIView+FontSize.h"
 
 @interface HomeVC ()<SDCycleScrollViewDelegate,VerticalTextLoopViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -31,6 +33,7 @@
 }
 
 - (void) configurationNavigation {
+    [UIView setIgnoreTags:@[@(111), @(1)]];
     self.view.backgroundColor = APP_COLOR_BASE_HOME_BG;
     self.headView = [UIView new];
     _headView.frame = VIEWFRAME(0, 64, SCREEN_WIDTH, 293);
@@ -179,6 +182,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 取消选中效果
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    CommonVC *commonvc = [CommonVC new];
+    NSString *title = [_titleArr objectAtIndex:indexPath.row];
+    commonvc.titleStr = title;
+    commonvc.switchID = indexPath.row;
+    [self.navigationController pushViewController:commonvc animated:YES];
 }
 
 #pragma mark - 轮播图代理

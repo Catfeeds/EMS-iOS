@@ -395,6 +395,9 @@
 		C28D21131F27076A00028738 /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28D21121F27076A00028738 /* RequestModel.m */; };
 		C28D21161F270D0700028738 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28D21151F270D0700028738 /* BaseModel.m */; };
 		C2B11EF61F1F198B0087A507 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B11EF51F1F198B0087A507 /* cover.png */; };
+		C2B9FE591F42E29D00E18818 /* CommonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B9FE581F42E29D00E18818 /* CommonVC.m */; };
+		C2B9FE5F1F43D91900E18818 /* ComCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B9FE5E1F43D91900E18818 /* ComCollectionCell.m */; };
+		C2B9FE621F43F86E00E18818 /* UIView+FontSize.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B9FE611F43F86E00E18818 /* UIView+FontSize.m */; };
 		C2D1A06F1F2039F300168968 /* UITextField+Lazy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D1A06E1F2039F300168968 /* UITextField+Lazy.m */; };
 		C2ED44941F1C81B700A753D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ED44931F1C81B700A753D8 /* main.m */; };
 		C2ED449D1F1C81B700A753D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ED449B1F1C81B700A753D8 /* Main.storyboard */; };
@@ -855,6 +858,12 @@
 		C28D21141F270D0700028738 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		C28D21151F270D0700028738 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		C2B11EF51F1F198B0087A507 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
+		C2B9FE571F42E29D00E18818 /* CommonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonVC.h; sourceTree = "<group>"; };
+		C2B9FE581F42E29D00E18818 /* CommonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonVC.m; sourceTree = "<group>"; };
+		C2B9FE5D1F43D91900E18818 /* ComCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComCollectionCell.h; sourceTree = "<group>"; };
+		C2B9FE5E1F43D91900E18818 /* ComCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComCollectionCell.m; sourceTree = "<group>"; };
+		C2B9FE601F43F86E00E18818 /* UIView+FontSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FontSize.h"; sourceTree = "<group>"; };
+		C2B9FE611F43F86E00E18818 /* UIView+FontSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FontSize.m"; sourceTree = "<group>"; };
 		C2D1A06D1F2039F300168968 /* UITextField+Lazy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Lazy.h"; sourceTree = "<group>"; };
 		C2D1A06E1F2039F300168968 /* UITextField+Lazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Lazy.m"; sourceTree = "<group>"; };
 		C2ED448F1F1C81B700A753D8 /* EMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1292,6 +1301,8 @@
 			children = (
 				C21B0E7E1F1F26EE00939917 /* HomeVC.h */,
 				C21B0E7F1F1F26EE00939917 /* HomeVC.m */,
+				C2B9FE571F42E29D00E18818 /* CommonVC.h */,
+				C2B9FE581F42E29D00E18818 /* CommonVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1312,6 +1323,8 @@
 				C2892B6E1F283C710027F8E9 /* VerticalTextLoopView.m */,
 				C2892B701F2874670027F8E9 /* HomeTableViewCell.h */,
 				C2892B711F2874670027F8E9 /* HomeTableViewCell.m */,
+				C2B9FE5D1F43D91900E18818 /* ComCollectionCell.h */,
+				C2B9FE5E1F43D91900E18818 /* ComCollectionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1471,6 +1484,8 @@
 		C21B0E7D1F1F25FD00939917 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C2B9FE601F43F86E00E18818 /* UIView+FontSize.h */,
+				C2B9FE611F43F86E00E18818 /* UIView+FontSize.m */,
 				C21518E71F2EF43B004C78D9 /* NSString+PinYin.h */,
 				C21518E81F2EF43B004C78D9 /* NSString+PinYin.m */,
 				C21B0EA71F1F5D4300939917 /* UILabel+Lazy.h */,
@@ -2281,7 +2296,9 @@
 				C207413E1F1EF6C2000C4A99 /* GuideVC.m in Sources */,
 				C21B0E861F1F272800939917 /* LoginVC.m in Sources */,
 				C2892B6F1F283C710027F8E9 /* VerticalTextLoopView.m in Sources */,
+				C2B9FE621F43F86E00E18818 /* UIView+FontSize.m in Sources */,
 				C21B0E891F1F273700939917 /* MineVC.m in Sources */,
+				C2B9FE5F1F43D91900E18818 /* ComCollectionCell.m in Sources */,
 				C270D1461F1DEADA00CD911B /* LaunchVC.m in Sources */,
 				C21B0E801F1F26EE00939917 /* HomeVC.m in Sources */,
 				C21518FC1F2F1FE3004C78D9 /* TableViewIndexView.m in Sources */,
@@ -2308,6 +2325,7 @@
 				C2892B721F2874670027F8E9 /* HomeTableViewCell.m in Sources */,
 				C215A2DC1F204A440063ED5C /* UIButton+Lazy.m in Sources */,
 				C22852EF1F29D11500D2B625 /* TipsTableViewCell.m in Sources */,
+				C2B9FE591F42E29D00E18818 /* CommonVC.m in Sources */,
 				C28D21161F270D0700028738 /* BaseModel.m in Sources */,
 				C2D1A06F1F2039F300168968 /* UITextField+Lazy.m in Sources */,
 				C21D7D151F303273005C0030 /* DraggableButton.m in Sources */,

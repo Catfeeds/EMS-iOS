@@ -33,7 +33,7 @@
     label.text = text;
     label.textAlignment = textAlignment;
     label.textColor = textColor;
-    label.font = font;
+//    label.font = font;
     label.backgroundColor = gbColor;
     return label;
 }
